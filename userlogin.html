@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="user.css">
+
+</head>
+<body>
+    <form onsubmit="return validate()" action="homepage.html">
+    <div class="login-box">
+       <h1>login</h1> 
+       <div class="textbox">
+           <label>Username</label>
+           <input id="uname" type="text" placeholder="Username">
+       </div>
+       <div class="textbox">
+           <label>password</label>
+           <input id="pass" type="password" placeholder="Password">
+       </div>
+
+       <input type="submit" class="btn" value="Login">
+
+    </div>
+</form>
+<script type="text/javascript">
+    function validate(){
+        var uname=document.getElementById("uname");
+        var pass=document.getElementById("pass");
+        if((uname.value=="" || pass.value=="")){
+            alert("Username or password should not be null");
+            return false;
+        }else {
+        return true;
+        }
+        
+
+
+    }
+    
+</script>
+</body>
+</html>
